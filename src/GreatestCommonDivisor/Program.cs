@@ -7,10 +7,10 @@ namespace GreatestCommonDivisor
     {
         static void Main(string[] args)
         {
-            Constraint: 1 ≤ 𝑎, 𝑏 ≤ 2e9
+            // Constraint: 1 ≤ 𝑎, 𝑏 ≤ 2e9
             var ary = Console.ReadLine().Split()
                 .Take(2)
-                .Select(x => Convert.ToUInt64(x))
+                .Select(x => Convert.ToInt32(x))
                 .ToArray();
             var a = ary[0];
             var b = ary[1];
@@ -19,10 +19,10 @@ namespace GreatestCommonDivisor
             Console.WriteLine(result);
         }
 
-        private static UInt64 gcd_naive(UInt64 a, UInt64 b) 
+        private static Int32 gcd_naive(Int32 a, Int32 b) 
         {
-            var current_gcd = 1UL;
-            for(var d = 2UL; d <= a && d <= b; ++d) 
+            var current_gcd = 1;
+            for(var d = 2; d <= a && d <= b; ++d) 
             {
                 if (a % d == 0 && b % d == 0) 
                 {
@@ -36,7 +36,7 @@ namespace GreatestCommonDivisor
             return current_gcd;
         }
 
-        private static UInt64 gcd_fast(UInt64 a, UInt64 b)
+        private static Int32 gcd_fast(Int32 a, Int32 b)
         {
             if (b == 0)
             {
