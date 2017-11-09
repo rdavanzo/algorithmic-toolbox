@@ -4,6 +4,19 @@ namespace SmallFibonacciNumber
 {
     class Program
     {
+        static void Main(string[] args)
+        {
+            // runAssertions();
+            // Console.WriteLine("Assertions complete.");
+
+            // stressTest();
+            // Console.WriteLine("Stress test complete.");
+
+            var n = Convert.ToInt32(Console.ReadLine());
+            var smallFibNumber = fibonacciIterative(n);
+            Console.WriteLine(smallFibNumber);
+        }
+
         private static Int32 fibonacciRecursive(Int32 n)
         {
             if (n <= 1)
@@ -68,19 +81,6 @@ namespace SmallFibonacciNumber
                     Console.WriteLine("Ok");
                 }
             }
-        }
-
-        static void Main(string[] args)
-        {
-            // runAssertions();
-            // Console.WriteLine("Assertions complete.");
-
-            // stressTest();
-            // Console.WriteLine("Stress test complete.");
-
-            var n = Convert.ToInt32(Console.ReadLine());
-            var smallFibNumber = fibonacciIterative(n);
-            Console.WriteLine(smallFibNumber);
         }
     }
 }

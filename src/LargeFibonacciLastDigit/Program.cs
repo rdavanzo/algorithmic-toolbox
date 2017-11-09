@@ -4,6 +4,19 @@ namespace LargeFibonacciLastDigit
 {
     class Program
     {
+        static void Main(string[] args)
+        {
+            //runAssertions();
+            //Console.WriteLine("Assertions complete.");
+
+            // stressTest();
+            // Console.WriteLine("Stress test complete.");
+
+            var n = Convert.ToInt32(Console.ReadLine());
+            var result = hugeFibonacciFast(n);
+            Console.WriteLine(result);
+        }
+
         private static UInt64 hugeFibonacciNaive(UInt64 n)
         {
             if (n <= 1ul)
@@ -67,19 +80,6 @@ namespace LargeFibonacciLastDigit
                     Console.WriteLine("Ok");
                 }
             }
-        }
-
-        static void Main(string[] args)
-        {
-            //runAssertions();
-            //Console.WriteLine("Assertions complete.");
-
-            // stressTest();
-            // Console.WriteLine("Stress test complete.");
-
-            var n = Convert.ToInt32(Console.ReadLine());
-            var result = hugeFibonacciFast(n);
-            Console.WriteLine(result);
         }
     }
 }
