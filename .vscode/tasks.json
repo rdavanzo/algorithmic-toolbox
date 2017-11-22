@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}/src/APlusB/APlusB.csproj"
+                "${workspaceRoot}/src/ImprovingQuickSort/ImprovingQuickSort.csproj"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"
